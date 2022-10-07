@@ -35,6 +35,30 @@
         </v-row>
         <v-divider></v-divider>
         <h3 class="display-1 font-weight-light pb-4 mt-5 text-center">What Products Exist in the Market?</h3>
+        <v-container>
+          <v-row class="mb-5">
+          <v-col cols="4"  v-for="competitor in competitors" :key="competitor.name">
+            <v-card class="justify-center">
+              <v-card-title style="justify-content: center;">
+                {{competitor.name}}
+              </v-card-title>
+              <v-container>
+                <v-img contain :src='competitor.url' style="height:158px; width:360px; justify-content: center;"></v-img>
+              </v-container>
+              <v-card-text>
+                <v-list-item>
+                  <v-list-item-content>
+                    {{competitor.text1}}
+                  </v-list-item-content>
+                  <v-list-item-content>
+                    {{competitor.text2}}
+                  </v-list-item-content>
+                </v-list-item>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+        </v-container>
         <v-row class="mb-5">
           <v-col cols="4"  v-for="competitor in competitors" :key="competitor.name">
             <v-card class="justify-center">
@@ -59,12 +83,41 @@
         </v-row>
         <v-divider></v-divider>
         <h3 class="display-1 font-weight-light pb-4 mt-5 text-center">What Solutions Do We Propose?</h3>
+        <v-container>
+          <v-row class="mb-5">
+          <v-col cols="4"  v-for="solution in solutions" :key="solution.name">
+            <v-card>
+              <v-row>
+                <v-col cols="6" class="text-left">
+                  <v-card-title>
+                    {{solution.name}}
+                  </v-card-title>
+                </v-col>
+                <v-col cols="6" class="text-right">
+                  <v-img :src="solution.image" contain style="width:1890.2px; height: 100px"></v-img>
+                </v-col>
+              </v-row>
+              <v-img></v-img>
+              <v-card-text>
+                {{solution.description}}
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+        </v-container>
         <v-row class="mb-5">
           <v-col cols="4"  v-for="solution in solutions" :key="solution.name">
             <v-card>
-              <v-card-title>
-                {{solution.name}}
-              </v-card-title>
+              <v-row>
+                <v-col cols="4" class="text-left">
+                  <v-card-title>
+                    {{solution.name}}
+                  </v-card-title>
+                </v-col>
+                <v-col cols="8" class="text-right">
+                  <v-img :src="solution.image" contain style="width:1890.2px; height: 100px"></v-img>
+                </v-col>
+              </v-row>
               <v-img></v-img>
               <v-card-text>
                 {{solution.description}}
@@ -108,6 +161,7 @@
 export default {
   data() {
     return {
+      fullWidthImage: null,
       members: [
         {
           name: 'Danna Capitanachi',
@@ -158,21 +212,36 @@ export default {
       ],
       solutions: [
         {
-          name: 'Knife',
-          image: '',
-          description: 'asdfasdf',
+          name: 'Knife Guard',
+          image: 'https://i.imgur.com/LxSiT7P.jpg',
+          description: 'The initial knife guard attachment included a rotating component that would allow for the user to chop. It would attach the handle of the knife, allowing for it to be attached to varying size of handles. Furthermore, a slider is attached near the bottom end of the guard, allowing for a back-and-forth cutting motion while keeping the guard relatively steady and still.'
         },
         {
           name: 'Plate',
-          image: '',
-          description: 'asdfasdf',
+          image: 'https://i.imgur.com/VvNxbP5.jpg',
+          description: 'The initial plate prototype design includes curved sides, allowing for easier scooping when an individual may not have access to another limb. A portion of the plate also contains ridges that hold meat in place, allowing for easier cutting. Lastly, a non-slip liner coats the bottom of the plate to reduce the chances of spilling due to movement.',
         },
         {
           name: 'Utensil Holder',
-          image: '',
-          description: 'adsfasdf'
+          image: 'https://i.imgur.com/cKohGDr.jpg',
+          description: 'The current utensil holder prototype design consists of cross-shaped holes on an elastic band in order to accomodate for different shapes of utensils, targeting a universal design.This product also incorporates a snap-and-lock button mechanism and a flexible body in order to allow for all hand sizes to be compatible with the assistive utensil holder.'
         }
       ]
+    }
+  },
+  methods: {
+    getImageClass: function (i) {
+      return {
+        'fullWidthImage': this.fullWidthImageIndex === i
+      };
+    },
+    onImageClick: function(i){
+      if (this.fullWidthImageIndex === i) {
+        this.fullWidthImageIndex = null;
+      }
+      else{
+        this.fullWidthImageIndex = i;
+      }
     }
   }
 }

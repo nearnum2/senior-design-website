@@ -214,7 +214,7 @@ export default {
                 {
                     title: 'Knife Guard CAD Model',
                     button: 'Knife Guard',
-                    link: 'https://i.imgur.com/CdCsCUR.jpg', //'Design 1: https://i.imgur.com/1N9uhLB.jpg', Design 3: https://i.imgur.com/cDgmkEC.jpg
+                    link: 'https://i.imgur.com/G0ih8Pm.jpg', //'Design 1: https://i.imgur.com/1N9uhLB.jpg', Design 3: https://i.imgur.com/cDgmkEC.jpg
                     description: 'Iterations of the knife guard include taking into account the multiple ways that a user may use a knife, whether through a chopping or a see-saw motion.',
                     route: '/documentation/knife-guard'
                 },

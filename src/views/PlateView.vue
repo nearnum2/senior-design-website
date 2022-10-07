@@ -23,10 +23,10 @@
                 </v-col>
             
                 <v-col cols="6" class="text-right">
-                    <v-img src="https://i.imgur.com/8p8bd4Q.jpg"></v-img>
+                    <v-img src="https://i.imgur.com/57lo3Zn.jpg"></v-img>
                 </v-col>
                 <v-col cols="6" class="text-left">
-                    <v-img src="https://i.imgur.com/eDo5wVr.jpg"></v-img>
+                    <v-img src="https://i.imgur.com/E0QmcN4.jpg"></v-img>
                 </v-col>
                 
                 <v-col cols="6" class="text-right">
@@ -37,7 +37,7 @@
                                 Using the chart from above, we are able to go through different permutations and combinations 
                                 of the different possibilities of design, considering them individually and then collectively,
                                 identifying what may or may not work. All possibitlies are considered, regardless if it may have
-                                sounded outlandish as itm ay have sounded or seemed.
+                                sounded outlandish as it may have sounded or seemed.
                             </v-card-text>
                             <v-card-text>
                                 This allows us to more accurately and confidently be sure of the different design concepts and variants
@@ -55,19 +55,19 @@
                                 shown on the right
                             </v-card-text>
                             <v-card-text>
-                                The design incorporates an attachment to the knife handle which will be pin connected to a partially
-                                see-through guard which can rotate about the pin, allowing for the user to place their fingers behind the guard
-                                as they are cutting. The attachment would be able to fit to a varying size of the guard, allowing for easier access
-                                and less hassle when purchasing the product
+                                The design incorporates the values and functions that we had listed above, specifically creating a plate that would have sloping slides and a
+                                pronounded lip on a third of the plate. Shown on the right, there would also be tiny ridges that would aid in holding the food down when cutting 
+                                the product, separated from the rest of the compartments via a removable, curved plate divider. Lastly, the bottom would be coated with a material
+                                that has a high coefficient of friction, allowing for the plate to remain stationary regardless of movement
                             </v-card-text>
                         </v-card>
                     </v-row>
                 </v-col>
                 <v-col cols="3" class="text-right">
-                    <v-img src="https://i.imgur.com/D0ob190.jpg"></v-img>
+                    <v-img src="https://i.imgur.com/wyWWW3X.jpg"></v-img>
                 </v-col>
                 <v-col cols="3" class="text-right">
-                    <v-img src="https://i.imgur.com/GhU5EoH.jpg"></v-img>
+                    <v-img src="https://i.imgur.com/7xxQDCd.jpg"></v-img>
                 </v-col>
                 <v-col cols="6" class="text-right">
                     <template>
@@ -92,10 +92,10 @@
                         </v-card-text>
                         <v-card-text>
                             As you can see from the slides on the left, you can see that the team went through different iterations, incorporating the initial
-                            pin connected design, using two members that would allow for a more rotation. However, upon analysis, we arrived at the conclusion
-                            that the stresses developed on the parts would lead to quick failure as well as a very unintuitive design. We then moved to a modified
-                            pin shape design, allowing for rotation as well as chopping and rocking when cutting, but issues regarding wear and ease of design lead
-                            us to iterate through to our current design, based off of a connecting pin from a water bottle handle, seen in the last slide.
+                            design of using a divider. However, the differences are not so apparently, especially on SOLIDWORKS. The changes have been in the
+                            manufacturing process of the plate. The initial process would be using a mold in order to create a polypropylene plate that would 
+                            then be dip coated to provide the slip-resistant base. The divider would then be 3D printed with a matching mechanism built
+                            into the plate to allow for ease of removal.
                         </v-card-text>
                     </v-card>
                 </v-col>
@@ -116,17 +116,14 @@
         return {
           items: [
             {
-              src: 'https://i.imgur.com/1N9uhLB.jpg',
+                src: 'https://i.imgur.com/04cdiVu.jpg'
             },
             {
-              src: 'https://i.imgur.com/CdCsCUR.jpg',
+                src: 'https://i.imgur.com/eM02R0R.jpg',
             },
             {
-              src: 'https://i.imgur.com/cDgmkEC.jpg',
-            },
-            {
-              src: 'https://i.imgur.com/jOZIOgE.jpg',
-            },
+                src: 'https://i.imgur.com/MNvIhcr.jpg',
+            }
           ],
         }
       },
