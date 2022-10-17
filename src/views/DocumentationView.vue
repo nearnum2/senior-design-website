@@ -4,17 +4,15 @@
             <h1 class="subheading my-4">Prototype Diagrams</h1>
             <v-container class="my-5" wrap>
                 <v-row  v-for="content in contents" :key="content.key">
-                    <v-col id="leftcol" cols="12" md="5">
-                        <v-card class="rounded-xl">
-                            <v-img
-                            :src='content.url' 
-                            max-height="250"
-                            contain
-                            ></v-img>
-                        </v-card>
+                    <v-col id="leftcol" cols="6">
+                      <v-img
+                        :src='content.url' 
+                        max-height="250"
+                        contain
+                        ></v-img>
                     </v-col>
                     <v-col class="text-center" id="rightcol" cols="12" md="5">
-                        <v-container class="subheading">
+                      <v-container class="subheading">
                             {{content.title}}
                         </v-container>
                         <v-divider></v-divider>
@@ -30,138 +28,35 @@
             <h1 class="subehading mb-5">
                 Prototyping, Testing, and Modeling
             </h1>
-            
-                    <!--
-                    <v-card
-    flat
-    tile
-  >
-  
-    <v-window
-      v-model="onboarding"
-    >
-      <v-window-item
-        v-for="cad_design in cad_designs"
-        :key="cad_design.url"
-      >
-        <v-card
-          color="black"
-          height="600"
-        >
-          <v-row
-            class="fill-height"
-            align="center"
-            justify="center"
-          >
-            <h1
-              style="font-size: 5rem;"
-              class="white--text"
-            >
-              {{cad_design.title}}
-            </h1>
-            <v-img 
-            :src="cad_design.link"
-            style="height: 400px; width: 800px"></v-img>
-            
-          </v-row>
-        </v-card>
-      </v-window-item>
-    </v-window>
-
-    <v-card-actions class="justify-space-between ">
-      <v-btn
-        text
-        @click="prev"
-      >
-        <v-icon>mdi-chevron-left</v-icon>
-      </v-btn>
-      <v-item-group
-        v-model="onboarding"
-        class="text-center"
-        mandatory
-      >
-        <v-item
-          v-for="n in length"
-          :key="`btn-${n}`"
-          v-slot="{ active, toggle }"
-        >
-          <v-btn
-            :input-value="active"
-            icon
-            @click="toggle"
-          >
-            <v-icon>mdi-record</v-icon>
-          </v-btn>
-        </v-item>
-      </v-item-group>
-      <v-btn
-        text
-        @click="next"
-      >
-        <v-icon>mdi-chevron-right</v-icon>
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-                    
-                    <v-carousel
-                    cycle
-                    height="400"
-                    hide-delimiter-background
-                    show-arrows-on-hover
-                >
-                    <v-carousel-item
-                    v-for="cad_design in cad_designs"
-                    :key="cad_design.url"
-                    >
-                    <v-sheet
-                        height="35%"
-                    >
-                        <v-row
-                        class="fill-height"
-                        align="center"
-                        justify="center"
-                        >
-                        <div class="text-h5">
-                            {{cad_design.title}}
+            <v-row>
+                <v-col 
+                class="pa-3 d-flex flex-column"
+                cols="4"
+                v-for="cad_design in cad_designs" 
+                :key="cad_design.link">
+                    <v-card class="flex d-flex flex-column">
+                        <div class="mt-5 mb-2">
+                            <v-img 
+                            :src='cad_design.link'
+                            contain
+                            class="mx-auto"
+                            style="width:252px; height:166px">
+                            </v-img>
                         </div>
-                        <v-img :src="cad_design.link">
-
-                        </v-img>
-                        </v-row>
-                    </v-sheet>
-                    </v-carousel-item>
-                </v-carousel> -->
-                    <v-row>
-                        <v-col 
-                        class="pa-3 d-flex flex-column"
-                        cols="4"
-                        v-for="cad_design in cad_designs" 
-                        :key="cad_design.link">
-                            <v-card class="flex d-flex flex-column">
-                                <div class="mt-5 mb-2">
-                                    <v-img 
-                                    :src='cad_design.link'
-                                    contain
-                                    class="mx-auto"
-                                    style="width:252px; height:166px">
-                                    </v-img>
-                                </div>
-                                <p class="caption font-italic">
-                                    {{cad_design.title}}
-                                </p>
-                                <v-card-text>
-                                    {{cad_design.description}}
-                                </v-card-text>
-                                <v-card-actions>
-                                    <v-btn flat outlined router :to="cad_design.route">
-                                        More Info
-                                    </v-btn>
-                                </v-card-actions>
-                            </v-card>
-                            
-                        </v-col>
-                    </v-row>
-                
+                        <p class="caption font-italic">
+                            {{cad_design.title}}
+                        </p>
+                        <v-card-text>
+                            {{cad_design.description}}
+                        </v-card-text>
+                        <v-card-actions>
+                            <v-btn flat outlined router :to="cad_design.route">
+                                More Info
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-col>
+            </v-row>
         </v-container>
         <v-divider></v-divider>
         
@@ -263,11 +158,6 @@ export default {
 #leftcol {
     color:red;
     text-align: right;
-}
-
-v-img {
-    height: 100%;
-    width: 100%
 }
 
 </style>
