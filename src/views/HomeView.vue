@@ -59,6 +59,7 @@
           </v-col>
         </v-row>
         </v-container>
+        <!--
         <v-row class="mb-5">
           <v-col cols="4"  v-for="competitor in competitors" :key="competitor.name">
             <v-card class="justify-center">
@@ -81,6 +82,7 @@
             </v-card>
           </v-col>
         </v-row>
+        
         <v-divider></v-divider>
         <h3 class="display-1 font-weight-light pb-4 mt-5 text-center">What Solutions Do We Propose?</h3>
         <v-container>
@@ -104,7 +106,43 @@
             </v-card>
           </v-col>
         </v-row>
+        </v-container> -->
+        <v-divider></v-divider>
+        <v-container class="text-center my-5">
+            <h3 class="display-1 font-weight-light pb-4 mt-5 text-center">
+                What Solutions do we propose?
+            </h3>
+            <v-row>
+                <v-col 
+                class="pa-3 d-flex flex-column"
+                cols="4"
+                v-for="solution in solutions" 
+                :key="solution.route">
+                    <v-card class="flex d-flex flex-column">
+                        <div class="mt-5 mb-2">
+                            <v-img 
+                            :src='solution.image'
+                            contain
+                            class="mx-auto"
+                            style="width:252px; height:166px">
+                            </v-img>
+                        </div>
+                        <p class="caption font-italic">
+                            {{solution.title}}
+                        </p>
+                        <v-card-text>
+                            {{solution.description}}
+                        </v-card-text>
+                        <v-card-actions>
+                            <v-btn flat outlined router :to="solution.route">
+                                More Info
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-col>
+            </v-row>
         </v-container>
+        <!--
         <v-row class="mb-5">
           <v-col cols="4"  v-for="solution in solutions" :key="solution.name">
             <v-card>
@@ -125,6 +163,7 @@
             </v-card>
           </v-col>
         </v-row>
+        -->
         <v-divider></v-divider>
         <h3 class="display-1 font-weight-medium pb-4 mt-5 text-center">Where do we go from here?</h3>
         <h3 class="front-weight-light pb-4 mt-5 text-center">
@@ -137,7 +176,7 @@
         </v-container>
       </v-container>
     </v-content>
-    
+    <!--
     <h1>
       This is the Home Page
     </h1>
@@ -152,7 +191,7 @@
     <v-btn class="pink lighten-4 white--text--darken-4">click me</v-btn>
     <v-btn depressed dark color="pink"> depressed dark colored button</v-btn>
     <v-btn text="flat">testing flat button</v-btn>
-    
+    -->
   </div>
 </template>
 
@@ -165,11 +204,11 @@ export default {
       members: [
         {
           name: 'Danna Capitanachi',
-          position: 'Team Leader/Lead Designer'
+          position: 'Team Leader/Lead Designer (Knife Guard)'
         },
         {
           name: 'Nina San Pedro',
-          position: 'Meeting Scribe/Design Consultant'
+          position: 'Meeting Scribe/Lead Designer (Plate)'
         },
         {
           name: 'Melanie Suarez',
@@ -195,7 +234,7 @@ export default {
           name: 'Folks Kitchenware Knife',
           url: 'https://i.imgur.com/lYKEDNG.jpg',
           text1: 'Retractable Guard that acts as an anchor',
-          text2: 'Tactile guard that guides the finger through the cutting process'
+          text2: 'Tactile guard that guides the finger through the cutting process as well as blade position'
         },
         {
           name: 'Caregiver Products',
@@ -214,17 +253,20 @@ export default {
         {
           name: 'Knife Guard',
           image: 'https://i.imgur.com/LxSiT7P.jpg',
-          description: 'The initial knife guard attachment included a rotating component that would allow for the user to chop. It would attach the handle of the knife, allowing for it to be attached to varying size of handles. Furthermore, a slider is attached near the bottom end of the guard, allowing for a back-and-forth cutting motion while keeping the guard relatively steady and still.'
+          route: '/documentation',
+          description: 'We propose implementing a guard that will be attached to the handle of the knife along with a slider to allow for safe placement of the fingers'
         },
         {
           name: 'Plate',
           image: 'https://i.imgur.com/VvNxbP5.jpg',
-          description: 'The initial plate prototype design includes curved sides, allowing for easier scooping when an individual may not have access to another limb. A portion of the plate also contains ridges that hold meat in place, allowing for easier cutting. Lastly, a non-slip liner coats the bottom of the plate to reduce the chances of spilling due to movement.',
+          route: '/documentation',
+          description: 'We propose designing a plate with curvature along its sides, ridges to grip onto the food when cutting, and a silicone rubber bottom to restrict any sort of slipping',
         },
         {
           name: 'Utensil Holder',
           image: 'https://i.imgur.com/cKohGDr.jpg',
-          description: 'The current utensil holder prototype design consists of cross-shaped holes on an elastic band in order to accomodate for different shapes of utensils, targeting a universal design.This product also incorporates a snap-and-lock button mechanism and a flexible body in order to allow for all hand sizes to be compatible with the assistive utensil holder.'
+          route: '/documentation',
+          description: 'We propose creating a stiff, strap with cross-shaped holes within the structure in order to accomodate different sized utensils, hands, and utensil usage.'
         }
       ]
     }

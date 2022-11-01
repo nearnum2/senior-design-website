@@ -8,10 +8,11 @@
                 <span> Solutions</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
+            <!--
             <v-btn text="flat" color="grey">
                 <span>Welcome</span>
                 <v-icon right>mdi-exit-to-app</v-icon>
-            </v-btn>
+            </v-btn>-->
             
         </v-app-bar>
 
@@ -39,9 +40,7 @@ export default {
             drawer: false,
             links: [
                 { icon: 'home', text: 'Home', route: '/'},
-                { icon: 'menu_book', text: 'Documentation', route: '/documentation'},
-                { icon: 'build_circle', text: 'Prototyping', route: '/prototyping'},
-                
+                { icon: 'menu_book', text: 'Documentation', route: '/documentation'},              
             ],
         }
     },

@@ -1,7 +1,7 @@
 <template>
     <v-content>
         <v-container class="text-center mx-auto" fluid>
-            <h3 class="display-1 font-weight-light pb-8">Morphological Charts and Concept Variants</h3>
+            <h3 class="display-1 font-weight-light pb-8">Morphological Charts, Concept Variants, Models, and Designs</h3>
             <v-row>
                 <v-col cols="6" class="text-left">
                     <v-row class="mb-4">

@@ -95,7 +95,9 @@
                             pin connected design, using two members that would allow for a more rotation. However, upon analysis, we arrived at the conclusion
                             that the stresses developed on the parts would lead to quick failure as well as a very unintuitive design. We then moved to a modified
                             pin shape design, allowing for rotation as well as chopping and rocking when cutting, but issues regarding wear and ease of design lead
-                            us to iterate through to our current design, based off of a connecting pin from a water bottle handle, seen in the last slide.
+                            us to iterate through to our current design, based off of a connecting pin from a water bottle handle, seen in the fourth slide. We finally
+                            ended at iteration 5, a design that incorporates the multiple movements (rotation, translation, and combination) using a rotating slider as
+                            well as a rotation guard, all centered around using the same pin-lock design into the slots of the handle.
                         </v-card-text>
                     </v-card>
                 </v-col>
@@ -126,6 +128,9 @@
             },
             {
               src: 'https://i.imgur.com/jOZIOgE.jpg',
+            },
+            {
+                src: 'https://i.imgur.com/UX94KLY.jpg'
             },
           ],
         }

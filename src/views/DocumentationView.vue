@@ -89,14 +89,14 @@ export default {
                     url: 'https://i.imgur.com/VvNxbP5.jpg',
                     title: 'Plate Diagram',
                     status: true,
-                    description: 'The current plate prototype design includes curved sides, allowing for easier scooping when an individual may not have access to another limb. A portion of the plate also contains ridges that hold meat in place, allowing for easier cutting. Lastly, a non-slip liner is coated at the bottom of the plate in order to reduce the chances of spilling due to movement.'
+                    description: 'The initial plate prototype design includes curved sides, allowing for easier scooping when an individual may not have access to another limb. A portion of the plate also contains ridges that hold meat in place, allowing for easier cutting. Lastly, a non-slip liner is coated at the bottom of the plate in order to reduce the chances of spilling due to movement.'
                 },
                 {
                     key: 3,
                     url: 'https://i.imgur.com/cKohGDr.jpg',
                     title: 'Utensil Holder Diagram',
                     status: false,
-                    description: 'The current utensil holder prototype design includes specifically cut holes in order to accomodate different shapres of utensils. It also incorporates a snap-lock button mechanism in order to allow for different sized utensils to be compatible with the product.'
+                    description: 'The initial utensil holder prototype design includes specifically cut holes in order to accomodate different shapres of utensils. It also incorporates a snap-lock button mechanism in order to allow for different sized utensils to be compatible with the product.'
                 }
             ],
             cad_designs: [
