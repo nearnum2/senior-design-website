@@ -35,6 +35,59 @@
         </v-row>
         <v-divider></v-divider>
         <h3 class="display-1 font-weight-light pb-4 mt-5 text-center">What Products Exist in the Market?</h3>
+
+
+
+        <v-container>
+          <v-card
+            class="mx-auto"
+            max-width="344"
+          >
+            <v-card-text>
+              <div>Word of the Day</div>
+              <p class="text-h4 text--primary">
+                el·ee·mos·y·nar·y
+              </p>
+              <p>adjective</p>
+              <div class="text--primary">
+                relating to or dependent on charity; charitable.<br>
+                "an eleemosynary educational institution."
+              </div>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn
+                variant="text"
+                color="teal-accent-4"
+                @click="reveal = true"
+              >
+                Learn More
+              </v-btn>
+            </v-card-actions>
+          <v-expand-transition>
+            <v-card
+              v-if="reveal"
+              class="transition-fast-in-fast-out v-card--reveal"
+              style="height: 100%;"
+            >
+              <v-card-text class="pb-0">
+                <p class="text-h4 text--primary">
+                  Origin
+                </p>
+                <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
+              </v-card-text>
+              <v-card-actions class="pt-0">
+                <v-btn
+                  variant="text"
+                  color="teal-accent-4"
+                  @click="reveal = false"
+                >
+                  Close
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-expand-transition>
+          </v-card>
+        </v-container>
         <v-container>
           <v-row class="mb-5">
           <v-col cols="4"  v-for="competitor in competitors" :key="competitor.name">
@@ -201,6 +254,7 @@ export default {
   data() {
     return {
       fullWidthImage: null,
+      reveal: false,
       members: [
         {
           name: 'Danna Capitanachi',
@@ -288,3 +342,13 @@ export default {
   }
 }
 </script>
+
+
+<style>
+  .v-card--reveal {
+  bottom: 0;
+  opacity: 1 !important;
+  position: absolute;
+  width: 100%;
+}
+</style>

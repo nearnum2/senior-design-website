@@ -1,7 +1,7 @@
 <template>
     <v-content>
         <v-container class="text-center mx-auto" fluid>
-            <h3 class="display-1 font-weight-light pb-8">Morphological Charts and Concept Variants</h3>
+            <h3 class="display-1 font-weight-light pb-8">Morphological Charts, Concept Variants, and Prototypes</h3>
             <v-row>
                 <v-col cols="6" class="text-left">
                     <v-row class="mb-4">
@@ -101,7 +101,107 @@
                         </v-card-text>
                     </v-card>
                 </v-col>
+
+                
+
+                <v-col cols="6" class="text-left">
+                    <v-card>
+                        <v-card-title>
+                            Prototypes and Testing
+                        </v-card-title>
+                        <v-card-text>
+                            The main method of manufacturing was through rapid prototyping by way of 3D printing. The first 
+                            concern with the product was initial design and actual usage. The majority of Senior Design 2 was
+                            spent redesigning, tweaking, re-printing, re-factoring calculations, and re-analyzing the product 
+                            specifications. 
+
+                        </v-card-text>
+                        <v-card-text>
+
+                            The main changes and adjustments made to the design, through iterations, are reflected in the previous 
+                            section, the CAD Models. As for the rapid prototyping process, the biggest changes were related to the
+                            dimensions of the product. Initial prototypes were bulky, loose, and uncomfortable to use. These were 
+                            verified through ease-of-use tests, safety tests, and functional testing. For ease-of-use, the prototypes
+                            were tested in first handling (grabbing and adjusting to the grip without vision, cleaning, etc.). Safety
+                            tests were conducted in conjunction with functional testing by which the prototype was analyzed against
+                            the design specifications and identifying whether they met the standards that were determined. Testing
+                            included making sure the fingers could be placed naturally behind the knife guard without hassle, that
+                            the fingers remained safe during ambidextrous re-attachment, and so on. For functional testing, design
+                            specifications required that the product would be able to cut, to protect the fingers, to attach to the
+                            knife handle, and would not break or degrade at any point during use.
+
+                        </v-card-text>
+                        <v-card-text>
+                            In terms of the redesigns and reprints, the main concerns were the pin connection. Very often, either the
+                            hole from the slot would shrink as it cooled or the pin would be only slightly larger than the slot due to
+                            the cooling. Furthermore, in testing, it was found that the slider and the pin connection would be 
+                            experiencing a numerable amount of wear and tear, resulting in the need for slight lubrication in the 
+                            way of food-grade oil (olive oil, coconut oil, etc.). Lastly, in calculations, it was determined that the
+                            guard need to be smaller as the original design resulted in generating too much stresses on the pin during
+                            uses.
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col cols="6" class="text-right">
+                    <template>
+                        <v-carousel>
+                            <v-carousel-item
+                            v-for="(prototype,i) in prototypes"
+                            :key="i"
+                            :src="prototype.src"
+                            reverse-transition="fade-transition"
+                            transition="fade-transition"
+                            ></v-carousel-item>
+                        </v-carousel>
+                    </template>
+                </v-col>
+                <v-container>
+                    <v-divider class="my-5"></v-divider>
+                </v-container>
             </v-row>
+
+            <div class="text-center">
+                <h2>Testing and Calculations</h2>
+                <h3 class="font-weight-regular text-left mt-4">
+                    Below lists the testing and calculations portions of our knife guard, in order to validate the
+                    design through Engineering, ensuring quality, functionality, and safety. Furthermore, some data
+                    (qualitative or quantitative) will be shown below in order to ensure that on top of our product
+                    being supported by engineering analysis and calculations, it is tested in real life application
+                </h3>
+            </div>
+
+            <div 
+            class="text-left pt-5"
+            v-for="calculation in calculations"
+            :key="calculation.calculation_type">
+                <h3>Pin Stress Analysis</h3>
+                <v-row>
+                    <v-col 
+                    cols="6" 
+                    >
+                        <div 
+                        v-for="ex in calculation.explanation"
+                        :key="ex"
+                        class="my-2">     
+                         {{ex}}
+                        </div>
+                    </v-col>
+                    <v-col cols="6">
+                        <template>
+                            <v-carousel>
+                                <v-carousel-item
+                                contain
+                                v-for="(image,i) in calculation.images"
+                                :key="i"
+                                :src="image.src"
+                                reverse-transition="fade-transition"
+                                transition="fade-transition"
+                                ></v-carousel-item>
+                            </v-carousel>
+                        </template>
+                    </v-col>
+                </v-row>
+            </div>
             
         </v-container>
     </v-content>
@@ -133,6 +233,38 @@
                 src: 'https://i.imgur.com/UX94KLY.jpg'
             },
           ],
+          prototypes: [
+            {
+                src: 'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/300x200.jpg'
+            }
+          ],
+          calculations: [
+            {
+                calculation_type: 'Pin Stress Analysis',
+                explanation:  [`One of the main issues that was brought to the team's attention in Senior Design 1 was 
+                the amount of stress that would end up developing in the pin. Specifically, the stress due to rotation
+                as well as the stress due to shear, since the guard would be moving in conjuction with the pin and the
+                fingers of the user. Because of this, through the use of Statics, Mechanics of Solids, and FEA, the team
+                was able to devise a way to accurately determine the stress development which was later validated through
+                Finite Element Analysis.`,
+                `The problem is defined in such a way to determine what the stresses are in the pin when a sudden impact
+                is performed on the guard. For example, a sudden jerk forward or in any direction. What kind of stresses
+                develop from this kind of movement?`,
+                `This is done by making a few assumptions, then applying the principles of Statics to identify forces, 
+                Mechanics of Solids to identify stresses, and FEA to validate those values.`, `It is through these 
+                calculations that we were able to verify that the maximum stress development is around 144 psi while
+                the yield strength of 3D Printed PLA is around 3000-4000 psi, validating that our pin is valid through
+                engineering calculations`],
+                images: [
+                    { src: 'https://i.imgur.com/ZXcfwYE.jpg'},
+                    { src: 'https://i.imgur.com/5Q3rLce.jpg'},
+                    { src: 'https://i.imgur.com/bBjKNSQ.jpg'},
+                    { src: 'https://i.imgur.com/nD73trN.jpg'},
+                    { src: 'https://i.imgur.com/ifZUyuI.jpg'},
+                    { src: 'https://i.imgur.com/v1nbJGE.jpg'},
+                ]
+            }
+          ]
         }
       },
     }
