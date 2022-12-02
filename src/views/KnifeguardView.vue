@@ -107,7 +107,7 @@
                 <v-col cols="6" class="text-left">
                     <v-card>
                         <v-card-title>
-                            Prototypes and Testing
+                            Prototypes
                         </v-card-title>
                         <v-card-text>
                             The main method of manufacturing was through rapid prototyping by way of 3D printing. The first 
@@ -235,7 +235,7 @@
           ],
           prototypes: [
             {
-                src: 'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/300x200.jpg'
+                src: 'https://i.imgur.com/g1LYNzS.jpg'
             }
           ],
           calculations: [
@@ -263,7 +263,7 @@
                     { src: 'https://i.imgur.com/ifZUyuI.jpg'},
                     { src: 'https://i.imgur.com/v1nbJGE.jpg'},
                 ]
-            }
+            },
           ]
         }
       },

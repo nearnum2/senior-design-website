@@ -38,7 +38,7 @@
 
 
 
-        <v-container>
+        <!--<v-container>
           <v-card
             class="mx-auto"
             max-width="344"
@@ -87,7 +87,7 @@
             </v-card>
           </v-expand-transition>
           </v-card>
-        </v-container>
+        </v-container>-->
         <v-container>
           <v-row class="mb-5">
           <v-col cols="4"  v-for="competitor in competitors" :key="competitor.name">
