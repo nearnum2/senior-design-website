@@ -103,7 +103,7 @@
                 <v-col cols="6" class="text-left">
                     <v-card>
                         <v-card-title>
-                            Final Prototype
+                            Final Prototype and Cost
                         </v-card-title>
                         <v-card-text>
                             Because we had kept the main design from Senior Design 1, there was not much in the way
@@ -221,6 +221,7 @@
             { src: 'https://i.imgur.com/0RDWWOL.jpg'},
             { src: 'https://i.imgur.com/zGQLPyV.jpg'},
             { src: 'https://i.imgur.com/1rmQyW9.jpg'},
+            { src: 'https://i.imgur.com/VGtj0rf.jpg'}
           ],
           calculations: [
             {
@@ -348,7 +349,33 @@
                     { src: 'https://i.imgur.com/R2KINDp.jpg'},
                     { src: 'https://i.imgur.com/QejvHh5.jpg'},
                     { src: 'https://i.imgur.com/lijMjlx.jpg'},
-
+                ]
+            },
+            {
+                calculation_type: 'DFMEA of Plate Product',
+                explanations: [
+                    `In designing the products, the team must also consider any and all possible things that could go wrong with
+                    the product and analyze/identify to what extent are they catastrophic or dangerous to the end user/customer. 
+                    Through this chart, the team is able to best identify what parts of design to optimize and focus on while 
+                    being able to allow some failures since no product may be perfect. This chart is shown to the right.`
+                ],
+                images: [
+                    { src: 'https://i.imgur.com/Busq9pE.jpg'}
+                ]
+            },
+            {
+                calculation_type: 'QFD of Products',
+                explanations: [
+                    `In designing the products, one thing to consider heavily is how much the products are able to perform in comparison
+                    with competitors. Because of this, the team created a QFD, a chart that analyzes and scores the product on a graphical
+                    scale in order to identify weaknesses and strengths within the product. This helps in identifying areas of focus for
+                    the team as well as identifying what are some areas that too much focus is being placed upon. Lastly, it also helps the
+                    team to be reminded of customer needs and demands.`
+                ],
+                images: [
+                    { src: 'https://i.imgur.com/mbSEw1y.jpg'},
+                    { src: 'https://i.imgur.com/ZWPxVJe.jpg'},
+                    { src: 'https://i.imgur.com/VkhubI4.jpg'},
                 ]
             }
           ]

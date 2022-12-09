@@ -107,7 +107,7 @@
                 <v-col cols="6" class="text-left">
                     <v-card>
                         <v-card-title>
-                            Prototypes
+                            Final Prototype and Cost
                         </v-card-title>
                         <v-card-text>
                             The main method of manufacturing was through rapid prototyping by way of 3D printing. The first 
@@ -146,6 +146,7 @@
                     <template>
                         <v-carousel>
                             <v-carousel-item
+                            contain
                             v-for="(prototype,i) in prototypes"
                             :key="i"
                             :src="prototype.src"
@@ -174,7 +175,7 @@
             class="text-left pt-5"
             v-for="calculation in calculations"
             :key="calculation.calculation_type">
-                <h3>Pin Stress Analysis</h3>
+                <h3>{{calculation.calculation_type}}</h3>
                 <v-row>
                     <v-col 
                     cols="6" 
@@ -236,7 +237,9 @@
           prototypes: [
             {
                 src: 'https://i.imgur.com/g1LYNzS.jpg'
-            }
+            },
+            { src: 'https://i.imgur.com/OOHmnK9.jpg'}
+            
           ],
           calculations: [
             {
@@ -264,6 +267,18 @@
                     { src: 'https://i.imgur.com/v1nbJGE.jpg'},
                 ]
             },
+            {
+                calculation_type: 'DFMEA of Knife Guard',
+                explanation: [
+                    `In designing the products, the team must also consider any and all possible things that could go wrong with
+                    the product and analyze/identify to what extent are they catastrophic or dangerous to the end user/customer. 
+                    Through this chart, the team is able to best identify what parts of design to optimize and focus on while 
+                    being able to allow some failures since no product may be perfect. This chart is shown to the right.`
+                ],
+                images: [
+                    { src: 'https://i.imgur.com/2AEChRS.jpg'}
+                ]
+            }
           ]
         }
       },
