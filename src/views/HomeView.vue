@@ -17,6 +17,9 @@
           </v-col>
         </v-row>
         <v-divider></v-divider>
+        <v-container class="text-center mt-5">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/tDhbJK3mFwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </v-container>
         <v-row class="mt-5">
           <v-spacer></v-spacer>
           <v-col cols="6">
@@ -218,15 +221,7 @@
         </v-row>
         -->
         <v-divider></v-divider>
-        <h3 class="display-1 font-weight-medium pb-4 mt-5 text-center">Where do we go from here?</h3>
-        <h3 class="front-weight-light pb-4 mt-5 text-center">
-          In Senior Design 2, we will continue to work on the design, iterating through and providing
-          as many prototypes. This will allow us to deliver the most optimal product after considering all possible
-          combinations. Please click below to continue on and see the progress through out prototyping and testing process
-        </h3>
-        <v-container class="text-center">
-          <v-btn rounded class="white--text" color="#1D7290" router to="/documentation">Prototypes and Testing</v-btn>
-        </v-container>
+        
       </v-container>
     </v-content>
     <!--
@@ -306,13 +301,13 @@ export default {
       solutions: [
         {
           name: 'Knife Guard',
-          image: 'https://i.imgur.com/LxSiT7P.jpg',
+          image: 'https://i.imgur.com/KweVNMJ.jpg',
           route: '/documentation',
           description: 'We propose implementing a guard that will be attached to the handle of the knife along with a slider to allow for safe placement of the fingers'
         },
         {
           name: 'Plate',
-          image: 'https://i.imgur.com/VvNxbP5.jpg',
+          image: 'https://i.imgur.com/eUwpzAh.jpg',
           route: '/documentation',
           description: 'We propose designing a plate with curvature along its sides, ridges to grip onto the food when cutting, and a silicone rubber bottom to restrict any sort of slipping',
         },

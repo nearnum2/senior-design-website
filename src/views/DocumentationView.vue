@@ -79,14 +79,14 @@ export default {
             contents: [
                 {
                     key: 1,
-                    url: 'https://i.imgur.com/LxSiT7P.jpg',
+                    url: 'https://i.imgur.com/KweVNMJ.jpg',
                     title: 'Knife Guard Diagram',
                     status: true,
                     description: 'The initial knife guard attachment included a rotating component that would allow for the user to chop. It would attach the handle of the knife, allowing for it to be attached to varying size of handles. Furthermore, a slider is attached near the bottom end of the guard, allowing for a back-and-forth cutting motion while keeping the guard relatively steady and still.'
                 },
                 {
                     key: 2,
-                    url: 'https://i.imgur.com/VvNxbP5.jpg',
+                    url: 'https://i.imgur.com/eUwpzAh.jpg',
                     title: 'Plate Diagram',
                     status: true,
                     description: 'The initial plate prototype design includes curved sides, allowing for easier scooping when an individual may not have access to another limb. A portion of the plate also contains ridges that hold meat in place, allowing for easier cutting. Lastly, a non-slip liner is coated at the bottom of the plate in order to reduce the chances of spilling due to movement.'

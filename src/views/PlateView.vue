@@ -103,7 +103,7 @@
                 <v-col cols="6" class="text-left">
                     <v-card>
                         <v-card-title>
-                            Prototypes
+                            Final Prototype
                         </v-card-title>
                         <v-card-text>
                             Because we had kept the main design from Senior Design 1, there was not much in the way
@@ -120,7 +120,13 @@
                             The main iterations of these molds was shown such that the initial mold to generate the
                             intial prototype for the midterm presentation was a simple square-like shape, with no
                             draft angle. Further iterations would lead to eventually using a gradually sloped mold
-                            as well as switching the material to TPU (though this would have its own set of issues)
+                            as well as switching the material to TPU (though this would have its own set of issues). 
+                        </v-card-text>
+                        <v-card-text>
+                            Through all these iterations, the final product is shown here. The divider now has TPU
+                            tips in order to reduce wear and tear between the PLA rides as well as add a tactile 
+                            intuitive nature to pull at when removing the divider. Less silicone rubber was used, but
+                            was still just as effective as shown in the demo viddeo. 
                         </v-card-text>
                     </v-card>
                 </v-col>
@@ -185,7 +191,7 @@
                     </v-col>
                 </v-row>
             </div>
-
+            
             
         </v-container>
     </v-content>
@@ -212,7 +218,9 @@
             }
           ],
           prototypes: [
-            { src: 'https://i.imgur.com/4XiW0WO.jpg' },
+            { src: 'https://i.imgur.com/0RDWWOL.jpg'},
+            { src: 'https://i.imgur.com/zGQLPyV.jpg'},
+            { src: 'https://i.imgur.com/1rmQyW9.jpg'},
           ],
           calculations: [
             {
@@ -264,10 +272,83 @@
                 in order to show the damage that is sustained by each different material selection. It is shown in the order of 
                 HDPE, PLA, and Polypropylene while it is cut from left to right with a serrated knife and a sharp knife.`],
                 images: [
-                    { src: 'https://i.imgur.com/c2r7Y9O.jpg' },
+                    { src: 'https://i.imgur.com/4kNMws8.jpg'},
                     { src: 'https://i.imgur.com/1rsqgZM.jpg' },
+                    { src: 'https://i.imgur.com/mGgt9LO.jpg'},
+                    { src: 'https://i.imgur.com/c2r7Y9O.jpg' },
+                    { src: 'https://i.imgur.com/E9wS8Va.jpg'},
                     { src: 'https://i.imgur.com/R63x0V1.jpg' },
                     
+                ]
+            },
+            {
+                calculation_type: 'Microwave Testing of Materials',
+                explanations: [
+                    `One of the main issues that was brought to the team's attention as well as a consideration all throughout
+                    the engineering design progress was whether or not the product would be able to be 1) Microwavable and/or 
+                    2) Dishwasher-safe. Because of this, the two main products that competed in our consideration, PLA and 
+                    Polypropylene, was tested through these two processes.`,
+                    `Shown in the slides here is firstly the ability of the plate to survive microwave testing. The main issue
+                    that was noted by the team was material degradation and material failure due to thermal considerations. Any
+                    sort of deformation would be considered as a 'no' to the question of whether or not the product could be 
+                    microwaved.`,
+                    `As shown in the slides, the plate, made out of PLA, deformed. This is due to the air bubbles present within
+                    the actual product since there was a large amount of it present due to the 3D printing process whereby the
+                    plate was printed with a 10-20% infill. Polypropylene, on the other hand, could not be directly tested as 
+                    the process of manufacturing the plate through this material via 3D printing was not possible. Because of
+                    this, instead, Polypropylene tensile samples were tested in order to note any sort of deformation or failure.`,
+                    `This test was done in 90 second intervals. Not shown is Polypropylene since it did not show any deformation at
+                    all which is ideal while PLA, shown here, shows slight deformation. HDPE, another material that was considered
+                    was not tested as it had the possibility of containing toxic chemicals.`
+                ],
+                images: [
+                    {src: 'https://i.imgur.com/RibgkvE.jpg'},
+                    {src: 'https://i.imgur.com/MrgQ64a.jpg'},
+                ]
+            },
+            {
+                calculation_type: 'Dishwasher Testing of Materials',
+                explanations: [
+                    `As mentioned previously, a topic constantly brought up was whether or not the product would be dishwasher safe.
+                    Similar to the microwave testing, the observations to note would be any sort of material deformation and/or 
+                    degradation throughout the entirety of the process. Also similarly, the same materials were tested (PLA, 
+                    Polypropylene, HDPE) since they were the main considerations for what the final product would be made out of.`,
+                    `These materials would be tested at different temperatures but kept at the same time interval of 15 minutes each
+                    (75 minutes total), which is the average time for a dishwasher cycle. Noted in the slides, PLA deformed an extreme
+                    amount which was noted also through the Microwave testing. This solidified the idea that, if the final product 
+                    were to be manufactured through PLA, it would deform an extreme amount due to air bubbles present as well as the
+                    high temperatures present in the test. HDPE deformed very slightly but still exhibited similar traits of air 
+                    bubbles, while Polypropylene exhibited near to none material deformation or degradation.`,
+                    `This solidified the team's decision that Polypropylene as a final material to manufacture the plate would be ideal
+                    since it encapsulated a lot of the team's design goals for the product.`
+                ],
+                images: [
+                    { src: 'https://i.imgur.com/QBolv2h.jpg'},
+                    { src: 'https://i.imgur.com/qFDK9DH.jpg'},
+                    { src: 'https://i.imgur.com/IBVbx95.jpg'},
+                ]
+            },
+            {
+                calculation_type: 'Chemical Material Degradation',
+                explanations: [
+                    `One of the other concerns with our product is its ability to be chemically inert. Due to the multitude of different
+                    chemicals that our product may experience, there may be cases whereby the product will react negatively with a chemical
+                    which can cause anything from discoloration and strange smells to outright functional failure of the proudct. The main 
+                    concern of the team was its ability to withstand cleaning fluids such as isopropyl alcohol or bleach or simple dish soap.`,
+                    `In order to test this, the product was submerged within specific chemical baths in order to identify the material degradation
+                    of the material as well as any sort of large, mechanical changes within the product. Shown in the graphs on the right are 
+                    the different materials (PLA, Polypropylene, and HDPE) all placed in the different baths whereby the weight would be measured in
+                    5 day intervals.`,
+                    `Noted in the results is the fact that PLA seems to remain the most stable. Masses of HDPE and PP actually increased
+                    due to the absorption of the different materials. Because of this, it can be noted that all of the materials considered 
+                    were chemically inert in the sense that they did not experience degradation and instead enlarged. Because of this, it would 
+                    be safe to use PP since it would not react negatively to IPA or Clorox.`
+                ],
+                images: [
+                    { src: 'https://i.imgur.com/R2KINDp.jpg'},
+                    { src: 'https://i.imgur.com/QejvHh5.jpg'},
+                    { src: 'https://i.imgur.com/lijMjlx.jpg'},
+
                 ]
             }
           ]
